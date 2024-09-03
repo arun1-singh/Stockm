@@ -9,7 +9,7 @@ export async function GET(request) {
      const movies = database.collection('repository');
 
      const query = { };
-     const movie = await movies.find(query).toArray;    
+     const movie = await movies.find(query).toArray();    
      console.log(movie);
      return NextResponse.json({"a":24, movie})
 
